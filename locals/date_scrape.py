@@ -5,6 +5,14 @@ from datetime import datetime, date
 
 # creating the date module
 
+def searchDate(date_str):
+    pattern = r'\b\d{4}-\d{2}-\d{2}'
+
+    match_date = re.search(pattern, date_str).group()
+    return match_date
+
+
+
 def getDate(posted_date):
 
     # regex format: (?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2},\s+\d{4}
